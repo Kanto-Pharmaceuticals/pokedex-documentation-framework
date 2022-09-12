@@ -1,0 +1,9 @@
+name: build
+on: [push]
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lhci-pokedex
+        run: |
+          curl https://webhook.mattycakes.ca/hooks/lhci-pokedex?token=${{ secrets.AZURE_CREDENTIALS }}
