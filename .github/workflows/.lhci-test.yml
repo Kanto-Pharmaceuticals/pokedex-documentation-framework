@@ -1,30 +1,20 @@
-image: cypress/browsers:node14.15.0-chrome86-ff82
-
-stages:
-  - test
-
-# https://docs.gitlab.com/ee/ci/yaml/README.html#switch-between-branch-pipelines-and-merge-request-pipelines
-# https://docs.gitlab.com/ee/ci/yaml/README.html#rules
-workflow:
-  rules:
-    # run MERGE REQUEST PIPELINE if a merge request is created/updated
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-    # don't run BRANCH PIPELINE if a MR is already opened on this branch
-    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
-      when: never
-    # run BRANCH PIPELINE if a commit is pushed on any branch
-    - if: '$CI_COMMIT_BRANCH'
-
-lighthouse:
-  allow_failure: false
-  script:
-    - yarn install
-    - yarn build
-    - yarn lighthouse
-  stage: test
-  rules:
-    # run MERGE REQUEST PIPELINE if a merge request is created/updated
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-    # run BRANCH PIPELINE if a commit is pushed on master
-    - if: '$CI_COMMIT_BRANCH == "master"'
-
+name: CI
+on: [push]
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: yarn install, build
+        run: |
+          yarn install
+          yarn build
+      - name: run Lighthouse CI
+        run: |
+          yarn install -g @lhci/cli@0.8.x
+          yarn lighthouse
