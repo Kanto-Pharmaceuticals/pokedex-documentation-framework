@@ -8,6 +8,10 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@babel/core": "^7.19.0",
+    "@lhci/cli": "^0.9.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.23.1",
     "gatsby": "^4.22.1",
     "gatsby-plugin-feed": "^4.22.0",
     "gatsby-plugin-image": "^2.22.0",
@@ -21,11 +25,14 @@
     "gatsby-source-filesystem": "^4.22.0",
     "gatsby-transformer-remark": "^5.22.0",
     "gatsby-transformer-sharp": "^4.22.0",
+    "global": "^4.4.0",
     "prismjs": "^1.29.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-refresh": "^0.14.0",
     "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "typeface-montserrat": "0.0.75",
+    "typescript": "^4.8.3"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
@@ -44,8 +51,9 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --port 4222",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lighthouse": "lhci autorun"
   }
 }
