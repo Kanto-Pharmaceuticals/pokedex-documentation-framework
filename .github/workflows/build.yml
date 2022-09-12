@@ -6,4 +6,4 @@ jobs:
     steps:
       - name: lhci-pokedex
         run: |
-          curl https://webhook.mattycakes.ca/hooks/lhci-pokedex-documentation?token=${{ secrets.LHCI_WEBHOOK }}
+          curl https://webhook.mattycakes.ca/hooks/pokedex-documentation-master?token=${{ secrets.LHCI_WEBHOOK }}
