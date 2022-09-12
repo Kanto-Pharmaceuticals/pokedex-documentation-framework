@@ -2,7 +2,7 @@ module.exports = {
     ci: {
       collect: {
         numberOfRuns: 3,
-        startServerCommand: '/home/coconut/.nvm/versions/node/v16.17.0/bin/yarn serve',
+        startServerCommand: 'yarn serve',
         url: ['http://localhost:4222/'],
         settings: {
           skipAudits: ['uses-http2'],
