@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "pokedex-documentation-framework",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "React based Framework (Gatsby) that statically renders the Documentation for Pokédex project.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kanto Pharmaceuticals <matt.yf.poon@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Kanto-Pharmaceuticals/pokedex-documentation-framework/issues"
   },
   "dependencies": {
     "@babel/core": "^7.19.0",
