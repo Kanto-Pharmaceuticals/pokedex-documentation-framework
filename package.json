@@ -54,6 +54,9 @@
     "serve": "gatsby serve --port 4222",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "lighthouse": "lhci autorun"
+    "lighthouse": "lhci autorun",
+    "update-submodule": "git submodule update --recursive --remote",
+    "update-base": "git pull",
+    "update": "yarn update-submodule && yarn update-base"
   }
 }
