@@ -1,0 +1,48 @@
+name: Gatsby Build Webook
+on:
+  push
+jobs:
+  request-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cURL Gatsby Build Webhook
+        run: |
+          curl https://webhook.mattycakes.ca/hooks/pokedex-documentation-master?token=${{ secrets.GATSBY_BUILD_KEY }}
+      - name: cURL Mattermost Webhook
+        run: |
+          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**BUILD REQUEST ON GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
+  update-submodule:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+  run-prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # Make sure the actual branch is checked out when running on pull requests
+          ref: ${{ github.head_ref }}
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.2
+        with:
+          # This part is also where you can pass other options, for example:
+          prettier_options: --write **/*.{js,css,scss}
+      - name: cURL Mattermost Webhook
+        run: |
+          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**PRETTIER WRITE ON GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
+  run-lighthouseci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - run: npm install && npm install -g @lhci/cli
+      - run: npm run build
+      - run: lhci autorun
+      - run: |
+          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**LHCI TESTING ON GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
