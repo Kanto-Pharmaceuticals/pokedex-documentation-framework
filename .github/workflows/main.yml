@@ -12,6 +12,7 @@ jobs:
         run: |
           curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**BUILD REQUEST ON GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
   update-submodule:
+    needs: request-build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -22,6 +23,7 @@ jobs:
         run: |
           curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**SUBMODULE UPDATE ON GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
   run-prettier:
+    needs: [request-build, update-submodule]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,6 +40,7 @@ jobs:
         run: |
           curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**PRETTIER WRITE ON GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
   run-lighthouseci:
+    needs: [request-build, update-submodule, run-prettier]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -50,6 +53,7 @@ jobs:
       - run: |
           curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**LHCI TESTING ON GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
   confirm-build:
+    needs: [request-build, update-submodule, run-prettier, run-lighthouseci]
     runs-on: ubuntu-latest
     steps:
       - name: cURL Mattermost Webhook
