@@ -1,5 +1,5 @@
 name: Gatsby Build Webook
-on: [push]
+on: push
 jobs:
   curl:
     runs-on: ubuntu-latest
