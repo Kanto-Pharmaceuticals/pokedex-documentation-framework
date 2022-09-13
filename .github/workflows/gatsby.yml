@@ -1,0 +1,9 @@
+name: Gatsby Build Webook
+on: [push]
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cURL Webhook
+        run: |
+        curl https://webhook.mattycakes.ca/hooks/pokedex-documentation-master?token=${{ secrets.GATSY_BUILD_KEY }}
