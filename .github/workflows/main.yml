@@ -2,19 +2,8 @@ name: Pokedex Documentation Build
 on:
   push
 jobs:
-  update-submodule:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Checkout submodules
-        run: git submodule update --init --recursive
-      - name: cURL Mattermost Webhook
-        run: |
-          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**SUBMODULE UPDATE ON GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
   request-build:
     runs-on: ubuntu-latest
-    needs: update-submodule
     steps:
       - name: cURL Gatsby Build Webhook
         run: |
