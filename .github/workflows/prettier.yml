@@ -19,3 +19,6 @@ jobs:
         with:
           # This part is also where you can pass other options, for example:
           prettier_options: --write **/*.{js,css,scss}
+      - name: cURL Mattermost Webhook
+        run: |
+          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**PRETTIER WRITE COMPLETE ON GITHUB CI/CD**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}

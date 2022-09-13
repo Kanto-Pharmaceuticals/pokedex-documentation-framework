@@ -15,3 +15,5 @@ jobs:
       - run: npm install && npm install -g @lhci/cli
       - run: npm run build
       - run: lhci autorun
+      - run: |
+          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**LHCI TESTING COMPLETE ON GITHUB CI/CD**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
