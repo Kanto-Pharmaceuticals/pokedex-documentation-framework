@@ -111,8 +111,9 @@ module.exports = {
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        theme_color_in_head: false, // This will avoid adding theme-color meta tag, for dark/light mode.
       },
     },
   ],
