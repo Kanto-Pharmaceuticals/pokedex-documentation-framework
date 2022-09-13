@@ -1,4 +1,4 @@
-name: Gatsby Build Webook
+name: Pokedex Documentation Build
 on:
   push
 jobs:
