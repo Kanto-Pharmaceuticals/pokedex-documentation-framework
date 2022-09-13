@@ -1,7 +1,7 @@
 module.exports = {
     ci: {
       collect: {
-        numberOfRuns: 3,
+        numberOfRuns: 5,
         startServerCommand: 'yarn serve',
         url: ['http://localhost:4222/'],
         settings: {
