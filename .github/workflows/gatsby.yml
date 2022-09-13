@@ -1,5 +1,5 @@
 name: Gatsby Build Webook
-on: 
+on:
   push
 jobs:
   curl:
