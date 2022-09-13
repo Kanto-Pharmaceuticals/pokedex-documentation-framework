@@ -1,9 +1,13 @@
-name: build
+name: CI
 on: [push]
 jobs:
-  curl:
+  lighthouseci:
     runs-on: ubuntu-latest
     steps:
-      - name: lhci-pokedex
-        run: |
-          curl https://webhook.mattycakes.ca/hooks/pokedex-documentation-master?token=${{ secrets.LHCI_WEBHOOK }}
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - run: npm install && npm install -g @lhci/cli@0.8.x
+      - run: npm run build
+      - run: lhci autorun
