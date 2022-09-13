@@ -1,5 +1,9 @@
 name: Lighthouse Test
-on: workflow_dispatch
+on:
+  workflow_run:
+    workflows: [Gatsby Build Webook]
+    types:
+      - completed
 jobs:
   lighthouseci:
     runs-on: ubuntu-latest
