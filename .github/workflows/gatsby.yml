@@ -8,7 +8,6 @@ jobs:
       - name: cURL Gatsby Build Webhook
         run: |
           curl https://webhook.mattycakes.ca/hooks/pokedex-documentation-master?token=${{ secrets.GATSBY_BUILD_KEY }}
-    steps:
       - name: cURL Mattermost Webhook
         run: |
           curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**BUILD REQUEST SENT FOR POKEDEX DOCUMENTATION**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
