@@ -1,15 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Pokédex Documentation`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Kanto Pharmaceuticals`,
+      summary: `Digital solutions for the betterment of Pokémon.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `Documentation on the design, creation, and usage of the Pokédex.`,
+    siteUrl: `https://d.pokedex.mattycakes.ca/`,
   },
   plugins: [
     `gatsby-plugin-image`,
