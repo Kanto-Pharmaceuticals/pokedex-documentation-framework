@@ -6,4 +6,4 @@ jobs:
     steps:
       - name: cURL Webhook
         run: |
-        curl https://webhook.mattycakes.ca/hooks/pokedex-documentation-master?token=${{ secrets.GATSY_BUILD_KEY }}
+        curl https://webhook.mattycakes.ca/hooks/pokedex-documentation-master?token=${{ secrets.GATBSY_BUILD_KEY }}
