@@ -54,11 +54,10 @@
     "develop": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve --port 4222",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "lighthouse": "lhci autorun",
-    "update-submodule": "git submodule update --recursive --remote",
+    "update-submodule": "git submodule update --init --recursive --remote",
     "update-base": "git pull",
     "update": "yarn update-submodule && yarn update-base"
   }
