@@ -1,3 +1,9 @@
+/* Load the appropriate .env file */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+/* Load plugins, keep these as light as possible for better control */
 module.exports = {
   siteMetadata: {
     title: `Pokédex Documentation`,
