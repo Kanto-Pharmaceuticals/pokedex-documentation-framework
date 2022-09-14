@@ -7,15 +7,10 @@
 /* Begin React imports */
 import React from "react"
 import { ReactKeycloakProvider } from "@react-keycloak/web"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSpinner } from "@fortawesome/free-solid-svg-icons"
 
 /* Loading element, to signal the client they have landed. */
 const Loading = () => (
   <div className="init">
-    <p>
-      <FontAwesomeIcon icon={faSpinner} spinPulse size="xl" />
-    </p>
     <p>Initializing server size rendering...</p>
   </div>
 )
