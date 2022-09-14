@@ -15,6 +15,7 @@ module.exports = {
     siteUrl: `https://d.pokedex.mattycakes.ca/`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
