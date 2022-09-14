@@ -8,4 +8,5 @@ This is a React based Framework (Gatsby) that statically generates the Documenta
 - [x] Weave prettier opinionated formatting on push/pull
 - [x] Mattermost integration
 - [x] Split `/content` into submodule
+- [x] Integrate Keycloak for authentication
 - [ ] Develop frontend
