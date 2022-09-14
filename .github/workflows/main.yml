@@ -33,4 +33,4 @@ jobs:
     steps:
       - name: cURL Mattermost Webhook
         run: |
-          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**COMMIT IS COMPLETE SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
+          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**ALL GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
