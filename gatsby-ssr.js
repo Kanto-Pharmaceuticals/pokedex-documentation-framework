@@ -4,7 +4,7 @@
  * Server-Side Rendered (SSR) by Gatsby and Node.js.
  */
 
-/* Begin React imports */
+/* Begin React import statements */
 import React from "react"
 import { ReactKeycloakProvider } from "@react-keycloak/web"
 
