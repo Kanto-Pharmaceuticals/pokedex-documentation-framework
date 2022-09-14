@@ -4,8 +4,6 @@ This is a React based Framework (Gatsby) that statically generates the Documenta
 
 ## Roadmap
 
-Loose guide to new integrations and features
-
 - [x] Workflow for off-site build and lhci testing/comparisons
 - [x] Weave prettier opinionated formatting on push/pull
 - [x] Mattermost integration
