@@ -27,27 +27,8 @@ jobs:
       - name: cURL Mattermost Webhook
         run: |
           curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**PRETTIER WRITE ON GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
-  run-lighthouseci:
-    needs: [request-build, run-prettier]
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - run: npm install && npm install -g @lhci/cli
-      - run: npm run build
-      - name: lhci
-        run: lhci autorun
-      - if: steps.lhci.outcome == 'success'
-        run: |
-          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**LHCI TESTING ON GITHUB CI/CD SUCCESS**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
-      - if: steps.lhci.outcome == 'failure'
-        run: |
-          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": "**LHCI TESTING ON GITHUB CI/CD FAILURE**"}' https://mm.mattycakes.ca/hooks/${{ secrets.MATTERMOST_SECRET }}
   confirm-build:
-    needs: [request-build, run-prettier, run-lighthouseci]
+    needs: [request-build, run-prettier]
     runs-on: ubuntu-latest
     steps:
       - name: cURL Mattermost Webhook
