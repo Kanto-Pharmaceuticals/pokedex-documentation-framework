@@ -135,3 +135,135 @@
   font-display: swap;
   font-stretch: normal;
 }
+
+@font-face {
+  font-family: "Apercu";
+  src: url("./fonts/apercu/apercu-black-italic-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-black-italic-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-black-italic-pro.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url("./fonts/apercu/apercu-black-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-black-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-black-pro.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url("./fonts/apercu/apercu-extrabold-italic-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-extrabold-italic-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-extrabold-italic-pro.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url("./fonts/apercu/apercu-extrabold-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-extrabold-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-extrabold-pro.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url("./fonts/apercu/apercu-bold-italic-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-bold-italic-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-bold-italic-pro.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url("./fonts/apercu/apercu-bold-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-bold-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-bold-pro.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url("./fonts/apercu/apercu-medium-italic-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-medium-italic-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-medium-italic-pro.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url("./fonts/apercu/apercu-medium-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-medium-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-medium-pro.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Apercu Mono";
+  src: url("./fonts/apercu/apercu-mono-bold-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-mono-bold-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-mono-bold-pro.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Apercu Mono";
+  src: url("./fonts/apercu/apercu-mono-medium-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-mono-medium-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-mono-medium-pro.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Apercu Mono";
+  src: url("./fonts/apercu/apercu-mono-regular-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-mono-regular-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-mono-regular-pro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Apercu Mono";
+  src: url("./fonts/apercu/apercu-mono-light-pro.woff2") format("woff2"),
+    url("./fonts/apercu/apercu-mono-light-pro.woff") format("woff"),
+    url("./fonts/apercu/apercu-mono-light-pro.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+}

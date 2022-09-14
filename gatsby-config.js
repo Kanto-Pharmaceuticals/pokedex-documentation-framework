@@ -1,13 +1,7 @@
 /* Load the appropriate .env file */
-if (process.env.STAGING) {
-  require("dotenv").config({
-    path: `.env.${process.env.NODE_ENV}.staging`,
-  })
-} else {
-  require("dotenv").config({
-    path: `.env.${process.env.NODE_ENV}`,
-  })
-}
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 /* Load plugins, keep these as light as possible for better control */
 module.exports = {
