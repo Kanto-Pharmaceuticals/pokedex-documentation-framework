@@ -41,7 +41,7 @@
   padding: var(--spacing-3);
   background-color: var(--color-white);
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.3s var(--transition-cb);
   color: var(--color-text);
   column-gap: var(--size-1);
   font-family: var(--font-sans-alt);

@@ -114,6 +114,8 @@
   --radius-m: 0.75rem;
   --radius-l: 1rem;
   --radius-xl: 1.25rem;
+  /* Animation transitions */
+  --transition-cb: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Colours System - Light */
@@ -121,7 +123,7 @@
   --color-white: #ffffff;
   --color-primary: var(--cedar-chest-600);
   --color-text: var(--black-coral-700);
-  --color-text-light: #4f5969;
+  --color-link: var(--light-cornflower-blue-600);
   --color-heading: #1a202c;
   --color-accent: #d1dce5;
 }
@@ -235,7 +237,7 @@ h4 > a,
 h5 > a,
 h6 > a {
   text-decoration: none;
-  color: inherit;
+  color: var(--color-text);
 }
 
 /* Prose */
@@ -278,7 +280,7 @@ li > ul {
 }
 
 blockquote {
-  color: var(--color-text-light);
+  color: var(--color-text);
   margin-left: calc(-1 * var(--spacing-6));
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
@@ -311,7 +313,7 @@ table thead tr th {
 /* Link */
 
 a {
-  color: var(--color-primary);
+  color: var(--color-link);
 }
 
 a:hover,
