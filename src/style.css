@@ -1,4 +1,7 @@
-/* CSS Custom Properties Definitions */
+/** 
+ * style.css
+ * Contains design system vars as wel as utility and global classes.
+ */
 
 /* Design System - Defaults */
 :root {
@@ -104,12 +107,20 @@
   --font-4xl: 2.4375rem;
   --font-5xl: 3.0625rem;
   --font-6xl: 3.8125rem;
+  /* Border-radius */
+  --radius-none: 0rem;
+  --radius-xs: 0.25rem;
+  --radius-s: 0.5rem;
+  --radius-m: 0.75rem;
+  --radius-l: 1rem;
+  --radius-xl: 1.25rem;
 }
 
 /* Colours System - Light */
 :root {
-  --color-primary: #005b99;
-  --color-text: #2e353f;
+  --color-white: #ffffff;
+  --color-primary: var(--cedar-chest-600);
+  --color-text: var(--black-coral-700);
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   --color-accent: #d1dce5;
@@ -121,11 +132,11 @@
 
 /* Resposive Variables - Default */
 :root {
-  --responsive-padding-large: var(--spacing-10);
+  --responsive-padding-large: var(--spacing-3);
 }
 
 /* Resposive Variables - Mobile */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   :root {
     --responsive-padding-large: var(--spacing-6);
   }

@@ -1,0 +1,85 @@
+/** 
+ * navbar.scss 
+ * Styles the navbar component.
+ */
+
+.navigation {
+  padding: var(--responsive-padding-large) 0;
+  column-gap: var(--spacing-3);
+}
+.navigation-center {
+  width: 100%;
+  flex-direction: row;
+  column-gap: var(--spacing-3);
+}
+.navigation-right {
+  column-gap: var(--size-1);
+}
+.navigation,
+.navigation-left,
+.navigation-center,
+.navigation-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.brand-name {
+  display: flex;
+  width: 100%;
+  padding: var(--spacing-3) 0;
+  align-items: center;
+  justify-content: left;
+}
+.brand-logo {
+  height: var(--size-3);
+  display: block;
+}
+.navigation-button {
+  border: 0; // removes default border on button element
+  display: flex;
+  margin: auto 0;
+  padding: var(--spacing-3);
+  background-color: var(--color-white);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  color: var(--color-text);
+  column-gap: var(--size-1);
+  font-family: var(--font-sans-alt);
+  font-weight: var(--font-extrabold);
+  border-radius: var(--radius-s);
+  span {
+    margin: auto;
+    display: none;
+  }
+}
+.navigation-button:hover {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}
+.navigation-fullmark {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .navigation-button {
+    span {
+      display: block;
+      word-wrap: none;
+      white-space: pre;
+    }
+  }
+  .navigation-fullmark {
+    display: block;
+  }
+  .navigation-wordmark {
+    display: none;
+  }
+  .brand-name {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navigation-center {
+    flex-direction: row-reverse;
+  }
+}
