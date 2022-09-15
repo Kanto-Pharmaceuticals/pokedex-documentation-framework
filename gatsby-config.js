@@ -15,6 +15,7 @@ module.exports = {
     siteUrl: `https://d.pokedex.mattycakes.ca/`,
   },
   plugins: [
+    "gatsby-plugin-use-dark-mode",
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     {
