@@ -1,14 +1,16 @@
 /**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
+ * bio.js
+ * Bio component that queries for data with Gatsby's useStaticQuery component
+ * Reference:
+ * - https://www.gatsbyjs.com/docs/use-static-query/
  */
 
+/* Begin React import statements */
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+/* Define a Bio const for the component */
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -55,4 +57,5 @@ const Bio = () => {
   )
 }
 
+/* Export Bio as the default */
 export default Bio

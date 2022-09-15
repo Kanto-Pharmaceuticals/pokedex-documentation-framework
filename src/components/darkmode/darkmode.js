@@ -1,19 +1,18 @@
 /**
- * Dark Mode Toggle Component
+ * darkmode.js
  * Returns a toggle to switch between dark and light mode using use-dark-mode.
- * References: https://github.com/donavon/use-dark-mode#parameters,
- *             https://www.gatsbyjs.com/plugins/gatsby-plugin-use-dark-mode/
+ * References:
+ * - https://github.com/donavon/use-dark-mode#parameters
+ * - https://www.gatsbyjs.com/plugins/gatsby-plugin-use-dark-mode/
  */
 
+/* Begin React import statements */
 import React from "react"
 import useDarkMode from "use-dark-mode"
 import Toggle from "../toggle"
 import "./darkmode.scss"
 
-/**
- * Wraps a const to store/morph/persist darkMode state, and a toggle to change
- * it.
- */
+/* Define const to store/morph/persist darkMode state, & toggle to change it. */
 const Darkmode = ({ className, size, sunColor, moonColor }) => {
   const darkMode = useDarkMode(false, {
     onChange: state => {
@@ -45,4 +44,5 @@ const Darkmode = ({ className, size, sunColor, moonColor }) => {
   )
 }
 
+/* Export Darkmode as the default */
 export default Darkmode
