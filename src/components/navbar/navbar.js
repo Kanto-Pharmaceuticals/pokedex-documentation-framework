@@ -21,6 +21,7 @@ export default function Navbar() {
     <nav className="navigation">
       <div className="navigation-left">
         <button
+          aria-label="Hamburger menu button"
           className="navigation-button"
           onClick={() => {
             setIsNavExpanded(!isNavExpanded)
@@ -31,16 +32,20 @@ export default function Navbar() {
         </button>
       </div>
       <div className="navigation-center">
-        <Link to="/" className="brand-name">
+        <Link
+          aria-label="Pokédex Documentation home link button"
+          to="/"
+          className="brand-name"
+        >
           <Wordmark className="brand-logo navigation-wordmark" />
           <Fullmark className="brand-logo navigation-fullmark" />
         </Link>
-        <button className="navigation-button">
+        <button aria-label="Search button" className="navigation-button">
           <Search />
         </button>
       </div>
       <div className="navigation-right">
-        <button className="navigation-button">
+        <button aria-label="Log in button" className="navigation-button">
           <LogIn />
           <span>Log In</span>
         </button>
