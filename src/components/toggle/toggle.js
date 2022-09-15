@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./toggle.scss";
+import React from "react"
+import PropTypes from "prop-types"
+import "./toggle.scss"
 
 /*
 Toggle Switch Component
@@ -16,13 +16,13 @@ const ToggleSwitch = ({
   onChange,
   optionLabels,
   small,
-  disabled
+  disabled,
 }) => {
   function handleKeyPress(e) {
-    if (e.keyCode !== 32) return;
+    if (e.keyCode !== 32) return
 
-    e.preventDefault();
-    onChange(!checked);
+    e.preventDefault()
+    onChange(!checked)
   }
 
   return (
@@ -33,14 +33,14 @@ const ToggleSwitch = ({
         className="toggle-switch-checkbox"
         id={id}
         checked={checked}
-        onChange={(e) => onChange(e.target.checked)}
+        onChange={e => onChange(e.target.checked)}
         disabled={disabled}
       />
       {id ? (
         <label
           className="toggle-switch-label"
           tabIndex={disabled ? -1 : 1}
-          onKeyDown={(e) => handleKeyPress(e)}
+          onKeyDown={e => handleKeyPress(e)}
           htmlFor={id}
         >
           <span
@@ -64,13 +64,13 @@ const ToggleSwitch = ({
         </label>
       ) : null}
     </div>
-  );
-};
+  )
+}
 
 // Set optionLabels for rendering.
 ToggleSwitch.defaultProps = {
-  optionLabels: ["Yes", "No"]
-};
+  optionLabels: ["Yes", "No"],
+}
 
 ToggleSwitch.propTypes = {
   id: PropTypes.string.isRequired,
@@ -79,7 +79,7 @@ ToggleSwitch.propTypes = {
   name: PropTypes.string,
   optionLabels: PropTypes.array,
   small: PropTypes.bool,
-  disabled: PropTypes.bool
-};
+  disabled: PropTypes.bool,
+}
 
-export default ToggleSwitch;
+export default ToggleSwitch

@@ -4,6 +4,5 @@
  * Ref: https://www.joshwcomeau.com/react/file-structure/
  */
 
- export * from "./darkmode"
- export { default } from "./darkmode"
- 
+export * from "./darkmode"
+export { default } from "./darkmode"
