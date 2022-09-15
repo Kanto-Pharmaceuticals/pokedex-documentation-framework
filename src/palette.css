@@ -5,7 +5,6 @@
  */
 
 :root {
-  /* Base Colours */
   --cedar-chest-050: #fdf4f3;
   --cedar-chest-100: #fbe8e5;
   --cedar-chest-200: #f9d4cf;
@@ -36,7 +35,6 @@
   --light-cornflower-blue-700: #216283;
   --light-cornflower-blue-800: #1f536d;
   --light-cornflower-blue-900: #1f465b;
-  /* Type Colours */
   --type-normal: #aea9a7;
   --type-fire: #cd6968;
   --type-water: #94b6db;
