@@ -13,7 +13,7 @@
   column-gap: var(--spacing-3);
 }
 .navigation-right {
-  column-gap: var(--size-1);
+  column-gap: var(--spacing-3);
 }
 .navigation,
 .navigation-left,
@@ -41,9 +41,9 @@
   padding: var(--spacing-3);
   background-color: var(--color-white);
   cursor: pointer;
-  transition: background-color 0.3s var(--transition-cb);
+  transition: background-color var(--transition-fast);
   color: var(--color-text);
-  column-gap: var(--size-1);
+  column-gap: var(--spacing-3);
   font-family: var(--font-sans-alt);
   font-weight: var(--font-extrabold);
   border-radius: var(--radius-s);
