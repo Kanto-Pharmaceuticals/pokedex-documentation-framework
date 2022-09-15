@@ -10,6 +10,7 @@ import React from "react"
 import { useState } from "react"
 import { Link } from "gatsby"
 import { Menu, LogIn, Search } from "react-feather"
+import { motion } from "framer-motion"
 import Fullmark from "../../images/fullmark.inline.svg"
 import Wordmark from "../../images/wordmark.inline.svg"
 import "./navbar.scss"
@@ -20,16 +21,38 @@ export default function Navbar() {
   return (
     <nav className="navigation">
       <div className="navigation-left">
-        <button
+        <motion.button
           aria-label="Hamburger menu button"
           className="navigation-button"
           onClick={() => {
             setIsNavExpanded(!isNavExpanded)
           }}
+          initial={{
+            backgroundColor: "var(--color-white)",
+            color: "var(--color-text)",
+          }}
+          whileHover={{
+            backgroundColor: "var(--color-text)",
+            color: "var(--color-white)",
+            transition: {
+              type: "tween",
+              ease: "easeInOut",
+              duration: 0.2,
+            },
+          }}
+          whileTap={{
+            backgroundColor: "var(--color-text)",
+            color: "var(--color-white)",
+            transition: {
+              type: "tween",
+              ease: "easeInOut",
+              duration: 0.1,
+            },
+          }}
         >
           <Menu />
           <span>Menu</span>
-        </button>
+        </motion.button>
       </div>
       <div className="navigation-center">
         <Link
@@ -40,15 +63,65 @@ export default function Navbar() {
           <Wordmark className="brand-logo navigation-wordmark" />
           <Fullmark className="brand-logo navigation-fullmark" />
         </Link>
-        <button aria-label="Search button" className="navigation-button">
+        <motion.button
+          aria-label="Search button"
+          className="navigation-button"
+          initial={{
+            backgroundColor: "var(--color-white)",
+            color: "var(--color-text)",
+          }}
+          whileHover={{
+            backgroundColor: "var(--color-text)",
+            color: "var(--color-white)",
+            transition: {
+              type: "tween",
+              ease: "easeInOut",
+              duration: 0.2,
+            },
+          }}
+          whileTap={{
+            backgroundColor: "var(--color-text)",
+            color: "var(--color-white)",
+            transition: {
+              type: "tween",
+              ease: "easeInOut",
+              duration: 0.1,
+            },
+          }}
+        >
           <Search />
-        </button>
+        </motion.button>
       </div>
       <div className="navigation-right">
-        <button aria-label="Log in button" className="navigation-button">
+        <motion.button
+          aria-label="Log in button"
+          className="navigation-button"
+          initial={{
+            backgroundColor: "var(--color-white)",
+            color: "var(--color-text)",
+          }}
+          whileHover={{
+            backgroundColor: "var(--color-text)",
+            color: "var(--color-white)",
+            transition: {
+              type: "tween",
+              ease: "easeInOut",
+              duration: 0.2,
+            },
+          }}
+          whileTap={{
+            backgroundColor: "var(--color-text)",
+            color: "var(--color-white)",
+            transition: {
+              type: "tween",
+              ease: "easeInOut",
+              duration: 0.1,
+            },
+          }}
+        >
           <LogIn />
           <span>Log In</span>
-        </button>
+        </motion.button>
       </div>
     </nav>
   )

@@ -35,13 +35,12 @@
   display: block;
 }
 .navigation-button {
+  -webkit-tap-highlight-color: transparent;
   border: 0; // removes default border on button element
   display: flex;
   margin: auto 0;
   padding: var(--spacing-3);
-  background-color: var(--color-white);
   cursor: pointer;
-  transition: background-color var(--transition-fast);
   color: var(--color-text);
   column-gap: var(--spacing-3);
   font-family: var(--font-sans-alt);
@@ -51,10 +50,6 @@
     margin: auto;
     display: none;
   }
-}
-.navigation-button:hover {
-  background-color: var(--color-text);
-  color: var(--color-white);
 }
 .navigation-fullmark {
   display: none;
