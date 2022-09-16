@@ -5,11 +5,12 @@
 
 /* Begin React import statements */
 import React from "react"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, Home, Smartphone, GitHub, LogIn, Settings } from "react-feather"
 import { links } from "./menu-links"
+import Darkmode from "../darkmode"
 import "./menu.scss"
 
 /* Export the menu as the default function */
@@ -39,6 +40,10 @@ export default function Menu(props) {
     const body = document.querySelector("body")
     body.style.overflow = isMenuExpanded ? "hidden" : "auto"
   }, [isMenuExpanded])
+  /* Stop child calling the parent div onclick event */
+  const noMenuClose = e => {
+    e.stopPropagation()
+  }
 
   return (
     <motion.div className="menu">
@@ -67,6 +72,7 @@ export default function Menu(props) {
           >
             <motion.div
               className="menu-card"
+              onClick={noMenuClose}
               initial={{
                 boxShadow: "var(--drop-shadow-none)",
                 left: "calc(var(--size-26) * -1)",
@@ -366,6 +372,13 @@ export default function Menu(props) {
                         GitHub Repository
                       </a>
                     </motion.button>
+                  </motion.li>
+                  <motion.li
+                    className=""
+                    variants={framerListItem}
+                    onClick={noMenuClose}
+                  >
+                    <Darkmode />
                   </motion.li>
                 </motion.ul>
               </div>

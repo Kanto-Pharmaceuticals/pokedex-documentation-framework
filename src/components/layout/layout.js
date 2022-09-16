@@ -7,7 +7,7 @@
 import * as React from "react"
 import Navbar from "../navbar"
 import Menu from "../menu"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { useKeycloak } from "@react-keycloak/web"
 
 /* Define Layout as a const, keep compact and minimal. */
