@@ -39,10 +39,11 @@
   border: 0; // removes default border on button element
   display: flex;
   margin: auto 0;
-  padding: var(--spacing-3);
   cursor: pointer;
   color: var(--color-text);
+  padding: var(--spacing-3);
   column-gap: var(--spacing-3);
+  align-items: center;
   font-family: var(--font-sans-alt);
   font-weight: var(--font-extrabold);
   border-radius: var(--radius-s);

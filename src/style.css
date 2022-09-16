@@ -109,20 +109,39 @@
   --font-6xl: 3.8125rem;
   /* Border-radius */
   --radius-none: 0rem;
-  --radius-xs: 0.25rem;
-  --radius-s: 0.5rem;
-  --radius-m: 0.75rem;
-  --radius-l: 1rem;
-  --radius-xl: 1.25rem;
+  --radius-2xs: 4px;
+  --radius-xs: 8px;
+  --radius-s: 12px;
+  --radius-m: 16px;
+  --radius-l: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 28px;
+  --radius-3xl: 32px;
   /* Animation transitions */
   --transition-fast: 0.2s ease-in-out;
   --transition-normal: 0.3s ease-in-out;
   --transition-slow: 0.4s ease-in-out;
+  /* Box-Shadows */
+  --drop-shadow-none: 0 0 #0000;
+  --drop-shadow-xs: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  --drop-shadow-s: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  --drop-shadow-m: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  --drop-shadow-l: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  --drop-shadow-xl: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --drop-shadow-2xl: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  --drop-shadow-3xl: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  --inset-shadow-xs: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 /* Colours System - Light */
 :root {
   --color-white: #ffffff;
+  --color-black: var(--black-coral-900);
+  --color-body: var(--color-white);
   --color-primary: var(--cedar-chest-600);
   --color-text: var(--black-coral-700);
   --color-link: var(--light-cornflower-blue-600);
@@ -402,6 +421,23 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+.noscroll {
+  height: 100%;
+  overflow: scroll;
+  overscroll-behavior: contain;
+}
+.noscroll-nobar {
+  height: 100%;
+  overflow: scroll;
+  overscroll-behavior: contain;
+}
+.noscroll-nobar::-webkit-scrollbar {
+  display: none;
+}
+.menu-bottom {
+  margin: 0;
 }
 
 /* Media queries */

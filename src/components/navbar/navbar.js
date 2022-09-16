@@ -7,17 +7,18 @@
 
 /* Begin React import statements */
 import React from "react"
-import { useState } from "react"
 import { Link } from "gatsby"
-import { Menu, LogIn, Search } from "react-feather"
+import { Menu, LogIn, LogOut, Search } from "react-feather"
 import { motion } from "framer-motion"
 import Fullmark from "../../images/fullmark.inline.svg"
 import Wordmark from "../../images/wordmark.inline.svg"
 import "./navbar.scss"
 
 /* Export the navbar as the default function */
-export default function Navbar() {
-  const [isNavExpanded, setIsNavExpanded] = useState(false)
+export default function Navbar(props) {
+  const { isMenuExpanded, setMenuExpanded } = props
+  const { keycloak, intialized } = props
+
   return (
     <nav className="navigation">
       <div className="navigation-left">
@@ -25,7 +26,7 @@ export default function Navbar() {
           aria-label="Hamburger menu button"
           className="navigation-button"
           onClick={() => {
-            setIsNavExpanded(!isNavExpanded)
+            setMenuExpanded(!isMenuExpanded)
           }}
           initial={{
             backgroundColor: "var(--color-white)",
@@ -93,35 +94,70 @@ export default function Navbar() {
         </motion.button>
       </div>
       <div className="navigation-right">
-        <motion.button
-          aria-label="Log in button"
-          className="navigation-button"
-          initial={{
-            backgroundColor: "var(--color-white)",
-            color: "var(--color-text)",
-          }}
-          whileHover={{
-            backgroundColor: "var(--color-text)",
-            color: "var(--color-white)",
-            transition: {
-              type: "tween",
-              ease: "easeInOut",
-              duration: 0.2,
-            },
-          }}
-          whileTap={{
-            backgroundColor: "var(--color-text)",
-            color: "var(--color-white)",
-            transition: {
-              type: "tween",
-              ease: "easeInOut",
-              duration: 0.1,
-            },
-          }}
-        >
-          <LogIn />
-          <span>Log In</span>
-        </motion.button>
+        {!keycloak.authenticated && (
+          <motion.button
+            aria-label="Log in button"
+            className="navigation-button"
+            onClick={() => keycloak.login()}
+            initial={{
+              backgroundColor: "var(--color-white)",
+              color: "var(--color-text)",
+            }}
+            whileHover={{
+              backgroundColor: "var(--color-text)",
+              color: "var(--color-white)",
+              transition: {
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.2,
+              },
+            }}
+            whileTap={{
+              backgroundColor: "var(--color-text)",
+              color: "var(--color-white)",
+              transition: {
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.1,
+              },
+            }}
+          >
+            <LogIn />
+            <span>Log In</span>
+          </motion.button>
+        )}
+        {!!keycloak.authenticated && (
+          <motion.button
+            aria-label="Log out button"
+            className="navigation-button"
+            onClick={() => keycloak.logout()}
+            initial={{
+              backgroundColor: "var(--color-white)",
+              color: "var(--color-text)",
+            }}
+            whileHover={{
+              backgroundColor: "var(--color-text)",
+              color: "var(--color-white)",
+              transition: {
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.2,
+              },
+            }}
+            whileTap={{
+              backgroundColor: "var(--color-text)",
+              color: "var(--color-white)",
+              transition: {
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.1,
+              },
+            }}
+          >
+            <LogOut />
+            <span>Log Out</span>
+          </motion.button>
+        )}
       </div>
     </nav>
   )

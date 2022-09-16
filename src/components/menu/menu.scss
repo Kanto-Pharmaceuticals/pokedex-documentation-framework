@@ -1,0 +1,49 @@
+/** 
+ * menu.scss 
+ * Styles the menu component.
+ */
+
+.menu-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--screen-full);
+  width: var(--screen-vw);
+  padding: var(--responsive-padding-large);
+  margin: 0;
+  z-index: 99;
+}
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: var(--font-sans-alt);
+  font-weight: var(--font-bold);
+  height: var(--screen-full);
+  background-color: var(--color-body);
+  border-radius: var(--radius-m);
+  padding: var(--responsive-padding-large);
+  width: fit-content;
+}
+.menu-list {
+  margin: 0;
+}
+.menu-items {
+  margin: 0;
+  list-style-type: none;
+  &:not(:last-child) {
+    margin: 0 0 calc(var(--responsive-padding-large)) 0;
+  }
+  a {
+    color: unset;
+    text-decoration: none;
+  }
+}
+.menu-spacer {
+  list-style-type: none;
+  height: var(--responsive-padding-large);
+  margin: 0;
+}
+.menu-close {
+  direction: rtl;
+}
