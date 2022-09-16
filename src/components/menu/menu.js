@@ -46,6 +46,7 @@ export default function Menu(props) {
         {isMenuExpanded && (
           <motion.div
             className="menu-modal"
+            onClick={closeMenu}
             initial={{
               backgroundColor: "rgba(0, 0, 0, 0)",
               backdropFilter: "blur(0px)",
