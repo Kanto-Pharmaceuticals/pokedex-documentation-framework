@@ -9,7 +9,7 @@
 /* Begin React import statements */
 import React from "react"
 import useDarkMode from "use-dark-mode"
-import Toggle from "../toggle"
+import Switch from "../switch"
 import "./darkmode.scss"
 
 /* Define const to store/morph/persist darkMode state, & toggle to change it. */
@@ -33,8 +33,7 @@ const Darkmode = ({ className, size, sunColor, moonColor }) => {
   })
   return (
     <div className={`${className}` + " darkmode-toggle"}>
-      <Toggle
-        optionLabels={["Dark", "Light"]}
+      <Switch
         id="darkmode-toggle"
         checked={darkMode.value}
         onChange={darkMode.toggle}

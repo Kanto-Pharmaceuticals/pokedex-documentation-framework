@@ -5,7 +5,7 @@
 
 /* Begin React import statements */
 import React from "react"
-import { useEffect, useRef } from "react"
+import { useEffect } from "react"
 import { Link } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, Home, Smartphone, GitHub, LogIn, Settings } from "react-feather"

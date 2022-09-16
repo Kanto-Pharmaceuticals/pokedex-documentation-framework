@@ -5,10 +5,10 @@
 
 /* Begin React import statements */
 import * as React from "react"
+import { useState } from "react"
+import { useKeycloak } from "@react-keycloak/web"
 import Navbar from "../navbar"
 import Menu from "../menu"
-import { useState, useRef, useEffect } from "react"
-import { useKeycloak } from "@react-keycloak/web"
 
 /* Define Layout as a const, keep compact and minimal. */
 const Layout = ({ location, title, children }) => {
