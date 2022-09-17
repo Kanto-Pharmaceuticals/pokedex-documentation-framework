@@ -19,6 +19,120 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     {
+      resolve: `gatsby-plugin-typesense`,
+      options: {
+        rootDir: `${__dirname}/public`, // Required
+        collectionSchema: {
+          // Required
+          name: "documentation",
+          fields: [
+            {
+              name: "page_path",
+              type: "string",
+              facet: false,
+              optional: false,
+              index: true,
+              sort: false,
+              infix: false,
+              locale: "",
+            },
+            {
+              name: "title",
+              type: "string",
+              facet: false,
+              optional: true,
+              index: true,
+              sort: false,
+              infix: false,
+              locale: "",
+            },
+            {
+              name: "date",
+              type: "string",
+              facet: false,
+              optional: true,
+              index: true,
+              sort: false,
+              infix: false,
+              locale: "",
+            },
+            {
+              name: "modified",
+              type: "string",
+              facet: false,
+              optional: true,
+              index: true,
+              sort: false,
+              infix: false,
+              locale: "",
+            },
+            {
+              name: "description",
+              type: "string",
+              facet: false,
+              optional: true,
+              index: true,
+              sort: false,
+              infix: false,
+              locale: "",
+            },
+            {
+              name: "tags",
+              type: "string[]",
+              facet: false,
+              optional: true,
+              index: true,
+              sort: false,
+              infix: false,
+              locale: "",
+            },
+            {
+              name: "main",
+              type: "string",
+              facet: false,
+              optional: true,
+              index: true,
+              sort: false,
+              infix: false,
+              locale: "",
+            },
+            {
+              name: "status",
+              type: "string",
+              facet: false,
+              optional: true,
+              index: true,
+              sort: false,
+              infix: false,
+              locale: "",
+            },
+            {
+              name: "page_priority_score",
+              type: "int32",
+              facet: false,
+              optional: false,
+              index: true,
+              sort: true,
+              infix: false,
+              locale: "",
+            },
+          ],
+          default_sorting_field: "page_priority_score", // Required
+        },
+        server: {
+          // Required
+          apiKey: process.env.TYPESENSE_API_ADMIN,
+          nodes: [
+            {
+              host: "typesense.mattycakes.ca",
+              port: "",
+              protocol: "https",
+            },
+          ],
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {

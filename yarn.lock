@@ -1020,6 +1020,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.19.0":
+  version "7.19.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.19.0.tgz#22b11c037b094d27a8a2504ea4dcff00f50e2259"
+  integrity sha512-eR8Lo9hnDS7tqkO7NsV+mKvCmv5boaXFSZ70DnfhcgiEne8hv9oCEd36Klw74EtizEqLsy4YnW8UWwpBVolHZA==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.16.7", "@babel/template@^7.18.10":
   version "7.18.10"
   resolved "https://registry.npmjs.org/@babel/template/-/template-7.18.10.tgz"
@@ -3450,7 +3457,7 @@ cheerio-select@^2.1.0:
     domhandler "^5.0.3"
     domutils "^3.0.1"
 
-cheerio@^1.0.0-rc.10:
+cheerio@^1.0.0-rc.10, cheerio@^1.0.0-rc.6:
   version "1.0.0-rc.12"
   resolved "https://registry.npmjs.org/cheerio/-/cheerio-1.0.0-rc.12.tgz"
   integrity sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==
@@ -5780,6 +5787,14 @@ gatsby-plugin-typescript@^4.22.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.22.0"
 
+gatsby-plugin-typesense@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typesense/-/gatsby-plugin-typesense-0.3.1.tgz#7b9037fb05c6bf314ae9fc8d918b7dbbe18856b2"
+  integrity sha512-upTLaG9mLyoWsGffQWkUE/BrXcteGcGch8BMxoT6d1VA+LKnkUNJvIFwH4capMbH6tHkIK6Yu3ct+oBmHUw5fA==
+  dependencies:
+    cheerio "^1.0.0-rc.6"
+    typesense "^0.11.2"
+
 gatsby-plugin-use-dark-mode@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-use-dark-mode/-/gatsby-plugin-use-dark-mode-1.5.0.tgz#57383e4d9abd1f8ab235b8c2b8de016a0b40116a"
@@ -7708,6 +7723,11 @@ lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.12, lodash@^4.17.15, lodash@^4.17.1
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
+loglevel@^1.7.1:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.8.0.tgz#e7ec73a57e1e7b419cb6c6ac06bf050b67356114"
+  integrity sha512-G6A/nJLRgWOuuwdNuA6koovfEV1YpqqAG4pRUlFaz3jj2QNZ8M4vBqnVA+HBTmU/AMNUtlOsMmSpF6NyOjztbA==
 
 longest-streak@^2.0.0:
   version "2.0.4"
@@ -11137,6 +11157,14 @@ typescript@^4.8.3:
   version "4.8.3"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.8.3.tgz"
   integrity sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==
+
+typesense@^0.11.2:
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/typesense/-/typesense-0.11.2.tgz#eab88edc6767940413d116cc238c8e65c8c250e0"
+  integrity sha512-E3iAjzeCVAywzDocvPrfVsms2Ggp3/jcG5Dg8acyuglILnpfXTR2pRtwiJqhaPwtGmDnZgfnH8ZKS85st6dUSg==
+  dependencies:
+    axios "^0.21.1"
+    loglevel "^1.7.1"
 
 ua-parser-js@^0.7.30:
   version "0.7.31"
