@@ -266,7 +266,7 @@ export default function Menu(props) {
                       </motion.li>
                     )
                   })}
-                  <li className="menu-spacer" />
+                  <li className="menu-spacer menu-bottom" />
                   <motion.li
                     className="menu-items"
                     onClick={closeMenu}
@@ -374,7 +374,7 @@ export default function Menu(props) {
                     </motion.button>
                   </motion.li>
                   <motion.li
-                    className="menu-items"
+                    className="menu-items menu-darkmode"
                     variants={framerListItem}
                     onClick={noMenuClose}
                   >

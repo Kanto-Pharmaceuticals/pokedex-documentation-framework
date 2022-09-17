@@ -14,7 +14,9 @@ import Menu from "../menu"
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  /* Keycloak provider */
   const { keycloak, initialized } = useKeycloak()
+  /* State and function for Menu component */
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const closeMenu = () => {
     isMenuExpanded && setMenuExpanded(false)

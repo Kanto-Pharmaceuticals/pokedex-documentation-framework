@@ -11,7 +11,6 @@ import React from "react"
 import useDarkMode from "use-dark-mode"
 import Toggle from "../toggle"
 import { Sun, Moon } from "react-feather"
-
 import "./darkmode.scss"
 
 /* Define const to store/morph/persist darkMode state, & toggle to change it. */
@@ -33,8 +32,10 @@ const Darkmode = ({ className, width }) => {
       }
     },
   })
+  /* Destructure feather icons to change the size */
   const SunIcon = () => <Sun size={16} />
   const MoonIcon = () => <Moon size={16} />
+
   return (
     <div className={`${className}` + " darkmode-toggle"}>
       <Toggle

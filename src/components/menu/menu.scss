@@ -26,7 +26,10 @@
   max-width: fit-content;
 }
 .menu-list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  height: var(--screen-full);
 }
 .menu-items {
   margin: 0;
@@ -46,4 +49,11 @@
 }
 .menu-close {
   direction: rtl;
+}
+.menu-darkmode {
+  position: sticky;
+  bottom: 0;
+}
+.menu-bottom {
+  margin-top: auto;
 }
