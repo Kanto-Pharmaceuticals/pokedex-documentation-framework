@@ -1,37 +1,46 @@
+/**
+ * toggle.js
+ * Creates a toggle switch that can be used in other components, prop types are
+ * documented inline with code.
+ */
+
+/* Begin React import statements */
 import React from "react"
 import PropTypes from "prop-types"
 import "./toggle.scss"
 
-/*
-Toggle Switch Component
-Note: id, checked and onChange are required for ToggleSwitch component to function. The props name, small, disabled
-and optionLabels are optional.
-Usage: <ToggleSwitch id="id" checked={value} onChange={checked => setValue(checked)}} />
-*/
-
 const ToggleSwitch = ({
-  id,
+  id, // (REQUIRED)
   name,
-  checked,
-  onChange,
-  optionLabels,
+  checked, // does not contain it's own internal state (REQUIRED)
+  onChange, // does not contain it's own interal function (REQUIRED)
+  optionLabels, // redundant, left in for posterity
   small,
-  disabled,
-  label,
-  labelOn,
-  labelOff,
-  IconOn,
-  IconOff,
+  disabled, // to disable to the toggleswitch
+  label, // the label outside of the toggle
+  labelOn, // the label inside on the left
+  labelOff, // the label inside on the right
+  IconOn, // pass component as props
+  IconOff, // pass component as props
+  DisableOutline, // disable the outline around the switch
 }) => {
+  /* Ability to toggle using keypress */
   function handleKeyPress(e) {
     if (e.keyCode !== 32) return
 
     e.preventDefault()
     onChange(!checked)
   }
+  /* Stores the conditional style to disable the switch outline */
+  const styles = {
+    switch: {
+      boxShadow: DisableOutline && "none",
+    },
+  }
 
   return (
     <div className="toggle-wrapper">
+      {/* Outside Label */}
       {label && <label htmlFor={id}>{label}</label>}
       <div className={"toggle-switch" + (small ? " small-switch" : "")}>
         <input
@@ -50,6 +59,7 @@ const ToggleSwitch = ({
             onKeyDown={e => handleKeyPress(e)}
             htmlFor={id}
           >
+            {/* Inside label to the left */}
             <span
               className={
                 labelOn
@@ -71,6 +81,7 @@ const ToggleSwitch = ({
               tabIndex={-1}
             />
             <span
+              style={styles.switch}
               className={
                 disabled
                   ? "toggle-switch-switch toggle-switch-disabled"
@@ -78,6 +89,7 @@ const ToggleSwitch = ({
               }
               tabIndex={-1}
             />
+            {/* Inside label to the right */}
             <span
               className={
                 labelOff
@@ -95,11 +107,12 @@ const ToggleSwitch = ({
   )
 }
 
-// Set optionLabels for rendering.
+/* Set optionLabels for rendering */
 ToggleSwitch.defaultProps = {
   optionLabels: ["Yes", "No"],
 }
 
+/* Set the prop types for the component */
 ToggleSwitch.propTypes = {
   id: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
@@ -110,4 +123,5 @@ ToggleSwitch.propTypes = {
   disabled: PropTypes.bool,
 }
 
+/* Export the ToggleSwitch as the default */
 export default ToggleSwitch

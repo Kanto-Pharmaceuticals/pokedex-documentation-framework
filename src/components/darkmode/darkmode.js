@@ -46,6 +46,7 @@ const Darkmode = ({ className, width }) => {
         labelOff="Dark"
         IconOn={SunIcon}
         IconOff={MoonIcon}
+        DisableOutline={true}
       />
     </div>
   )

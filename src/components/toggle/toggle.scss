@@ -1,3 +1,8 @@
+/** 
+ * toggle.scss 
+ * Styles the toggle component.
+ */
+
 .toggle-wrapper {
   display: inline-flex;
   gap: var(--responsive-padding-large);
@@ -45,17 +50,10 @@
       float: left;
       width: 50%;
       height: 36px;
-      padding: 0;
-      line-height: 24px;
-      font-size: 10px;
-      color: var(--color-white);
-      font-weight: bold;
       box-sizing: border-box;
     }
     &:before {
       content: "";
-      text-transform: uppercase;
-      padding-left: 10px;
       background-color: var(--color-black);
       color: var(--color-white);
     }
@@ -70,11 +68,8 @@
   }
   &-inner:after {
     content: "";
-    text-transform: uppercase;
-    padding-right: 10px;
     background-color: var(--color-body-mute);
     color: var(--color-white);
-    text-align: right;
   }
   &-switch {
     display: block;
