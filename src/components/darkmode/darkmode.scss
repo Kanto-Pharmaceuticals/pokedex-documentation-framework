@@ -1,14 +1,4 @@
 /** 
  * darkmode.scss 
- * Styles the navbar component.
+ * Styles the darkmode component.
  */
-
-.darkmode-toggle {
-  display: flex;
-  flex-direction: row-reverse;
-}
-.darkmode-toggle label {
-  align-self: self-end;
-  flex-grow: 1;
-  font-weight: var(--font-medium);
-}

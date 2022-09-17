@@ -142,11 +142,12 @@
   --color-white: #ffffff;
   --color-black: var(--black-coral-900);
   --color-body: var(--color-white);
+  --color-body-mute: var(--black-coral-100);
   --color-primary: var(--cedar-chest-600);
   --color-text: var(--black-coral-700);
   --color-link: var(--light-cornflower-blue-600);
   --color-heading: #1a202c;
-  --color-accent: #d1dce5;
+  --color-accent: var(--light-cornflower-blue-300);
 }
 
 /* Colours System - Dark */
@@ -155,12 +156,16 @@
 
 /* Resposive Variables - Default */
 :root {
+  --responsive-padding-medium: var(--spacing-1);
+  --responsive-padding-medium: var(--spacing-2);
   --responsive-padding-large: var(--spacing-3);
 }
 
 /* Resposive Variables - Mobile */
 @media screen and (min-width: 768px) {
   :root {
+    --responsive-padding-small: var(--spacing-2);
+    --responsive-padding-medium: var(--spacing-4);
     --responsive-padding-large: var(--spacing-6);
   }
 }

@@ -9,11 +9,13 @@
 /* Begin React import statements */
 import React from "react"
 import useDarkMode from "use-dark-mode"
-import Switch from "../switch"
+import Toggle from "../toggle"
+import { Sun, Moon } from "react-feather"
+
 import "./darkmode.scss"
 
 /* Define const to store/morph/persist darkMode state, & toggle to change it. */
-const Darkmode = ({ className, size, sunColor, moonColor }) => {
+const Darkmode = ({ className, width }) => {
   const darkMode = useDarkMode(false, {
     onChange: state => {
       const htmlElement = document.documentElement
@@ -31,14 +33,20 @@ const Darkmode = ({ className, size, sunColor, moonColor }) => {
       }
     },
   })
+  const SunIcon = () => <Sun size={16} />
+  const MoonIcon = () => <Moon size={16} />
   return (
     <div className={`${className}` + " darkmode-toggle"}>
-      <Switch
+      <Toggle
         id="darkmode-toggle"
+        className="darkmode-toggle"
         checked={darkMode.value}
         onChange={darkMode.toggle}
+        labelOn="Light"
+        labelOff="Dark"
+        IconOn={SunIcon}
+        IconOff={MoonIcon}
       />
-      <label htmlFor="darkmode-toggle">Dark Mode</label>
     </div>
   )
 }

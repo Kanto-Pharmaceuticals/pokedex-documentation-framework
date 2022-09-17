@@ -4,5 +4,5 @@
  * Ref: https://www.joshwcomeau.com/react/file-structure/
  */
 
-export * from "./switch"
-export { default } from "./switch"
+export * from "./toggle"
+export { default } from "./toggle"

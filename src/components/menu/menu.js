@@ -374,11 +374,11 @@ export default function Menu(props) {
                     </motion.button>
                   </motion.li>
                   <motion.li
-                    className=""
+                    className="menu-items"
                     variants={framerListItem}
                     onClick={noMenuClose}
                   >
-                    <Darkmode />
+                    <Darkmode width={245} />
                   </motion.li>
                 </motion.ul>
               </div>

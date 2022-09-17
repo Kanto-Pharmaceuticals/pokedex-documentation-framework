@@ -23,7 +23,7 @@
   background-color: var(--color-body);
   border-radius: var(--radius-m);
   padding: var(--responsive-padding-large);
-  width: fit-content;
+  max-width: fit-content;
 }
 .menu-list {
   margin: 0;
