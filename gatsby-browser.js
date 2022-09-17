@@ -16,20 +16,6 @@ import "./src/typography.css" // custom @font-face definitions
 import "./src/style.css" // global styles and utility
 import "prismjs/themes/prism.css" // prismjs syntax highlighting
 
-/* Loading element, to signal the client they have landed. */
-const Loading = () => (
-  <div className="init">
-    <p>Attempting handshake with authentication server...</p>
-  </div>
-)
-
-/* Loading element, to signal the client they have connected to auth server. */
-const Loaded = () => (
-  <div className="init">
-    <p>handshake with authentication server SUCCESS...</p>
-  </div>
-)
-
 /* Wraps root element in an keycloak instance for site-wide authentication. */
 export const wrapRootElement = ({ element }) => {
   return (

@@ -10,6 +10,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Menu, LogIn, LogOut, Search } from "react-feather"
 import { motion } from "framer-motion"
+import SearchBar from "../search"
 import Fullmark from "../../images/fullmark.inline.svg"
 import Wordmark from "../../images/wordmark.inline.svg"
 import "./navbar.scss"
@@ -54,6 +55,7 @@ export default function Navbar(props) {
           <Menu />
           <span>Menu</span>
         </motion.button>
+        <SearchBar />
       </div>
       <div className="navigation-center">
         <Link
