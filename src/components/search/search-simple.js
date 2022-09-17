@@ -9,31 +9,23 @@ import SearchResult from "./search-result"
 import "@algolia/autocomplete-theme-classic"
 import "./search-simple.scss"
 
-/** BEGIN: Required for Autocomplete
- */
+/* Appends the search query to location url */
 const VirtualSearchBox = connectSearchBox(() => null)
-
 function createURL(searchState) {
   return qs.stringify(searchState, { addQueryPrefix: true })
 }
-
 function searchStateToUrl({ location }, searchState) {
   if (Object.keys(searchState).length === 0) {
     return ""
   }
-
   return `${location.pathname}${createURL(searchState)}`
 }
-
 function urlToSearchState({ search }) {
   return qs.parse(search.slice(1))
 }
-/** END: Required for Autocomplete
- */
 
 export default function SearchInterface() {
-  /** BEGIN: Required for Autocomplete
-   */
+  /* Check if client is a browser first before detecting URL state */
   const isBrowser = () => typeof window !== "undefined"
   const [searchState, setSearchState] = React.useState(
     () => isBrowser() && urlToSearchState(window.location)
@@ -52,27 +44,32 @@ export default function SearchInterface() {
         )
     }, 400)
   }, [searchState])
+  /* Set the search state on submit */
   const onSubmit = React.useCallback(({ state }) => {
     setSearchState(searchState => ({
       ...searchState,
       query: state.query,
     }))
   }, [])
+  /* Set the search on reset */
   const onReset = React.useCallback(() => {
     setSearchState(searchState => ({
       ...searchState,
       query: "",
     }))
   }, [])
+  /* Added plugins for search */
   const plugins = React.useMemo(() => {
     return [] // add more plugins here
   }, [])
+  /* Adapt the search responses from typesense server */
   const search_response_adapter = result =>
     new SearchResponseAdapter(
       result,
       { params: {} },
       { geoLocationField: "_geoloc" }
     )
+  /* Wrap typesense adapter and provide as a client */
   const typesense_client = () =>
     new Typesense.Client({
       apiKey: process.env.TYPESENSE_API_SEARCH,
@@ -86,8 +83,6 @@ export default function SearchInterface() {
       connectionTimeoutSeconds: 2,
     })
   const client = typesense_client()
-  /** END: Required for Autocomplete
-   */
 
   return (
     <InstantSearch
