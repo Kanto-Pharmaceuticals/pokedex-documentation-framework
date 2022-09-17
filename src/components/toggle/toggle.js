@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./toggle.scss"
 
+/* Generalized ToggleSwitch component */
 const ToggleSwitch = ({
   id, // (REQUIRED)
   name,
@@ -109,18 +110,27 @@ const ToggleSwitch = ({
 
 /* Set optionLabels for rendering */
 ToggleSwitch.defaultProps = {
+  name: "Toggle Switch",
   optionLabels: ["Yes", "No"],
+  small: false,
+  DisableOutline: false,
 }
 
 /* Set the prop types for the component */
 ToggleSwitch.propTypes = {
   id: PropTypes.string.isRequired,
+  name: PropTypes.string,
   checked: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
-  name: PropTypes.string,
   optionLabels: PropTypes.array,
   small: PropTypes.bool,
   disabled: PropTypes.bool,
+  label: PropTypes.string,
+  labelOn: PropTypes.string,
+  labelOff: PropTypes.string,
+  IconOn: PropTypes.elementType,
+  IconOff: PropTypes.elementType,
+  DisableOutline: PropTypes.bool,
 }
 
 /* Export the ToggleSwitch as the default */
