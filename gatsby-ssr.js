@@ -8,13 +8,6 @@
 import React from "react"
 import { ReactKeycloakProvider } from "@react-keycloak/web"
 
-/* Loading element, to signal the client they have landed. */
-const Loading = () => (
-  <div className="init">
-    <p>Initializing server size rendering...</p>
-  </div>
-)
-
 /* Wraps root element in an empty keycloak instance for SSR */
 export const wrapRootElement = ({ element }) => {
   return (
@@ -23,7 +16,6 @@ export const wrapRootElement = ({ element }) => {
       initOptions={{
         onLoad: "login-required",
       }}
-      LoadingComponent={<Loading />}
     >
       {element}
     </ReactKeycloakProvider>
