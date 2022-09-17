@@ -1,3 +1,9 @@
+/**
+ * search-simple.js
+ * A wrapper for a typesense instantsearch autocomplete component.
+ */
+
+/* Begin React import statements */
 import * as React from "react"
 import qs from "qs"
 import Typesense from "typesense"
@@ -24,6 +30,7 @@ function urlToSearchState({ search }) {
   return qs.parse(search.slice(1))
 }
 
+/* Provides a button and modal for searching */
 export default function SearchInterface() {
   /* Check if client is a browser first before detecting URL state */
   const isBrowser = () => typeof window !== "undefined"
