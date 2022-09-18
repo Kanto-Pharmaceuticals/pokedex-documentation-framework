@@ -84,3 +84,9 @@
   font-weight: var(--font-extrabold);
   border-radius: var(--radius-s);
 }
+
+@media screen and (max-width: 680px) {
+  .aa-DetachedContainer {
+    padding: var(--responsive-padding-large);
+  }
+}
