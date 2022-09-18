@@ -12,7 +12,6 @@ import Seo from "../components/seo"
 /* Define as a react function (rfc) */
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -40,3 +39,13 @@ export default BlogIndex
 
 /* Head export to define metadata for the page */
 export const Head = () => <Seo title="Getting start with the Pokédex" />
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
