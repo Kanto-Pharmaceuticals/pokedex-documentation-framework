@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
       <p>
         The Pokédex project is split into two submodules,{" "}
         <code>`pokedex-*`</code> and <code>`pokedex-documentation-*`</code>,
-        which represent the full stack React app and a Gatsby React app for
+        which represent the MERN stack React app and a JAMstack Gatsby app for
         documentation of it respectively.{" "}
       </p>
     </Layout>
