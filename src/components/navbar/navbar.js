@@ -55,7 +55,6 @@ export default function Navbar(props) {
           <Menu />
           <span>Menu</span>
         </motion.button>
-        <SearchBar />
       </div>
       <div className="navigation-center">
         <Link
@@ -66,34 +65,7 @@ export default function Navbar(props) {
           <Wordmark className="brand-logo navigation-wordmark" />
           <Fullmark className="brand-logo navigation-fullmark" />
         </Link>
-        <motion.button
-          aria-label="Search button"
-          className="navigation-button"
-          initial={{
-            backgroundColor: "var(--color-white)",
-            color: "var(--color-text)",
-          }}
-          whileHover={{
-            backgroundColor: "var(--color-text)",
-            color: "var(--color-white)",
-            transition: {
-              type: "tween",
-              ease: "easeInOut",
-              duration: 0.2,
-            },
-          }}
-          whileTap={{
-            backgroundColor: "var(--color-text)",
-            color: "var(--color-white)",
-            transition: {
-              type: "tween",
-              ease: "easeInOut",
-              duration: 0.1,
-            },
-          }}
-        >
-          <Search />
-        </motion.button>
+        <SearchBar />
       </div>
       <div className="navigation-right">
         {!keycloak.authenticated && (
