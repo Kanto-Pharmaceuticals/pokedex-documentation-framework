@@ -1,4 +1,86 @@
+/** 
+ * search-simple.scss 
+ * Styles the search-simple component.
+ */
+
+.aa-Autocomplete {
+  line-height: var(--leading-normal);
+}
 // force cursor to pointer, else auto style is set
+.aa-DetachedSearchButton {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: unset;
+  height: fit-content;
+  transition: all 0.2s ease-in-out;
+  .aa-DetachedSearchButtonIcon {
+    cursor: pointer;
+    svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-text);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+.aa-DetachedSearchButton:hover {
+  background-color: var(--color-text);
+  svg {
+    color: var(--color-white);
+  }
+}
 .aa-DetachedSearchButtonIcon {
-  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+}
+.aa-DetachedOverlay {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px);
+  transition: all 0.2s ease-in-out;
+}
+.aa-DetachedContainer--modal {
+  font-family: var(--font-sans-alt);
+  font-weight: var(--font-bold);
+  background-color: var(--color-body);
+  border-radius: var(--radius-s);
+  padding: var(--responsive-padding-medium);
+}
+.aa-DetachedFormContainer {
+  border-bottom: 0;
+  padding: 0;
+  .aa-Form {
+    border-radius: var(--radius-xs);
+  }
+}
+.aa-Form:focus-within {
+  border-color: var(--color-accent);
+  box-shadow: var(--color-accent-muted) 0 0 0 2px,
+    inset var(--color-accent-muted) 0 0 0 2px;
+  outline: medium none currentColor;
+}
+.aa-Label svg {
+  color: var(--color-text);
+}
+.aa-Input {
+  color: var(--color-text);
+  &::placeholder {
+    color: var(--color-text-muted);
+  }
+}
+.aa-DetachedCancelButton {
+  color: var(--color-text);
+}
+.search-button-toggle {
+  -webkit-tap-highlight-color: transparent;
+  border: 0;
+  margin: auto 0;
+  color: var(--color-text);
+  padding: var(--spacing-3);
+  -webkit-column-gap: var(--spacing-3);
+  column-gap: var(--spacing-3);
+  align-items: center;
+  font-family: var(--font-sans-alt);
+  font-weight: var(--font-extrabold);
+  border-radius: var(--radius-s);
 }

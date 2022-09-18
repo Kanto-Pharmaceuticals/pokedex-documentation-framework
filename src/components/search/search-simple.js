@@ -105,10 +105,8 @@ export default function SearchInterface() {
           detachedCancelButton: "transition-all",
           form: "border-none",
           input: "autocomplete-input",
-          detachedOverlay: "backdrop-blur-md",
           detachedSearchButtonIcon: "cursor-pointer",
-          detachedSearchButton:
-            "cursor-pointer px-2 py-2 rounded-md text-regular font-medium",
+          detachedSearchButton: "search-button-toggle",
           detachedSearchButtonPlaceholder: "hidden",
         }}
         placeholder="Quick search..."

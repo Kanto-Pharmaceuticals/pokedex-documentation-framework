@@ -1,3 +1,9 @@
+/**
+ * search-autoocomplete.js
+ * A wrapper for algolia autocomplete-js.
+ */
+
+/* Begin React import statements */
 import { autocomplete } from "@algolia/autocomplete-js"
 import React, { createElement, Fragment, useEffect, useRef } from "react"
 import { createRoot } from "react-dom/client"

@@ -1,3 +1,9 @@
+/**
+ * search-result.js
+ * A component to render result items for searches.
+ */
+
+/* Begin React import statements */
 import React, { createElement } from "react"
 import { Link } from "gatsby"
 
