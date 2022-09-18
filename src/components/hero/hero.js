@@ -1,0 +1,13 @@
+/**
+ * hero.js
+ * A component that displays a hero div section.
+ */
+
+/* Begin React import statements */
+import React from "react"
+
+const Hero = () => {
+  return <div></div>
+}
+
+export default Hero

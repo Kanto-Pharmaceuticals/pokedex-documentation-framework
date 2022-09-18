@@ -147,7 +147,6 @@
   --color-text: var(--black-coral-700);
   --color-text-muted: var(--black-coral-200);
   --color-link: var(--light-cornflower-blue-600);
-  --color-heading: #1a202c;
   --color-accent: var(--light-cornflower-blue-300);
   --color-accent-muted: var(--light-cornflower-blue-200);
 }
@@ -208,7 +207,6 @@ h6 {
   margin-bottom: var(--leading-normal);
   font-family: var(--font-heading);
   font-weight: var(--font-extrabold);
-  color: var(--color-heading);
 }
 h2,
 h3,
