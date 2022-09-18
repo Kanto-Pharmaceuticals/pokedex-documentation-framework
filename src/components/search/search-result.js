@@ -16,11 +16,7 @@ export default function ResultItem({ hit, components }) {
             <components.Snippet tagName="mark" hit={hit} attribute="title" />
           </div>
           <div className="aa-ItemContentDescription">
-            <components.Snippet
-              tagName="mark"
-              hit={hit}
-              attribute="raw_markdown_body"
-            />
+            <components.Snippet tagName="mark" hit={hit} attribute="main" />
           </div>
         </div>
       </Link>
